@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Inter', sans-serif;
+}
+header{
+    background: #ffdba2;
+    padding: 2vw 4vw;
+}
+.menu{
+    display: none;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+header nav ul a{
+    text-decoration: none;
+    color: #000;
+}
+header nav ul a li{
+    list-style: none;
+}
+header nav ul a:hover{
+    text-decoration: underline;
+}
+.info_header{
+    padding: 8vw 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.info_esquerda{
+    white-space: pre-line;
+}
+.info_esquerda div span{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+.info_esquerda div span img{
+    margin-right: 10px;
+}
+.info_esquerda h1{
+    font-size: 130px;
+}
+.info_direita .me{
+    border-radius: 50%;
+    border: solid 10px #666;
+    margin-bottom: 30px;
+    height: 400px;
+}
+.info_direita div{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+.sobre{
+    padding: 4vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+.sobre img{
+    object-fit: cover;
+}
+.sobre div{
+    max-width: 50%;
+    margin-left: 30px;
+    white-space: pre-line;
+}
+.educacao, .experiencias, .habilidades, .interesses{
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+.educacao > div, .experiencias > div{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.educacao > div > div, .experiencias > div > div{
+    background-color: #ffdba2;
+    max-width: 500px;
+    margin: 0px 20px 0 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+footer{
+    padding: 4vw 4vw;
+    background: #ffdba2;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+footer > div > img{
+    margin-right: 10px;
+}
+footer a, .educacao a{
+    color: #000;
+}
+footer > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copy{
+    margin-top: 80px;
+}
+@media screen and (max-width:500px){
+    header nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+    .info_header{
+        flex-direction: column-reverse;
+    }
+    .info_direita{
+        align-self: center;
+    }
+    .me{
+        width: 60vw;
+        height: 60vw !important;
+        object-fit: cover;
+    }
+    .info_esquerda h1{
+        font-size: 2em !important;
+        text-align: center;
+    }
+    .info_esquerda h3{
+        text-align: center;
+    }
+    .sobre img{
+        display: none;
+    }
+    .sobre div{
+        max-width: fit-content;
+        margin-left: 0;
+    }
+    .educacao > div, .experiencias > div{
+        flex-direction: column;
+        align-items: inherit;
+    }
+    .educacao > div > div, .experiencias > div > div{
+        margin-bottom: 30px;
+    }
+    .habilidades > div, .interesses > div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .habilidades > div > img, .interesses > div > img{
+        width: 30vw;
+        padding: 10px;
+    }
+    footer > div > h3{
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width:800px){
+    .sobre{
+        flex-direction: column;
+    }
+    .sobre div{
+        max-width: fit-content;
+        margin-left: 0;
+    }
+    .educacao > div, .experiencias > div{
+        flex-wrap: wrap;
+
+    }
+    .educacao > div > div, .experiencias > div > div{
+        margin-bottom: 30px;
+    }
+}
